@@ -9,11 +9,8 @@ class LoginController extends Controller
 
 	public function get_user()
 	{
-		// $id = $_GET['id'];
-		// var_dump($id);die;
-		$user_data = $this->model->get_user($id);
-		var_dump($user_data);die;
+		$id = $_GET['id'];
+		$user_data = $this->model->get_user($id)[0];
 		$this->view->show('user',$user_data);
 	}
-
 }
